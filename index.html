@@ -1,0 +1,973 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/logo1.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Kopi Ceban Metro</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">					
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+			<!-- Owl Carousel CSS -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+			<!-- Owl Carousel JS -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+			
+			<style>
+				* {
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+					font-family: 'Roboto', sans-serif;
+				}
+
+				/* Variables for storing colors */
+				:root {
+					--card-clr: #161922;
+					--body-clr: #191d28;
+					--primary-clr: #f0bf6a;
+					--heading-clr: #363636;
+					--text-clr: #777777;
+				}
+
+				.review-area .section-header {
+					max-width: 700px;
+					text-align: center;
+					margin: 30px auto 40px;
+				}
+
+				.section-header h1 {
+					position: relative;
+					font-size: 36px;
+					color: var(--primary-clr);
+				}
+
+				.review-area .testimonials-container {
+					position: relative;
+				}
+
+				.review-area .testimonials-container .testimonial-card {
+					padding: 20px;
+				}
+
+				.review-area .testimonial-card .test-card-body {
+					background-color: #fff;
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+					padding: 20px;
+					border-radius: 10px;
+				}
+
+				.review-area .test-card-body .quote {
+					display: flex;
+					align-items: center;
+				}
+
+				.review-area .test-card-body .quote i {
+					font-size: 45px;
+					color: var(--heading-clr);
+					margin-right: 20px;
+				}
+
+				.review-area .test-card-body .quote h2 {
+					color: var(--heading-clr);
+				}
+
+				.review-area .test-card-body p {
+					margin: 10px 0px 15px;
+					font-size: 14px;
+					line-height: 1.5;
+					color: var(--text-clr);
+				}
+
+				.review-area .test-card-body .ratings {
+					margin-top: 20px;
+				}
+
+				.review-area .test-card-body .ratings i {
+					font-size: 17px;
+					color: var(--primary-clr);
+					cursor: pointer;
+				}
+
+				.review-area .testimonial-card .profile {
+					display: flex;
+					align-items: center;
+					margin-top: 25px;
+				}
+
+				.review-area .profile .profile-image {
+					width: 55px;
+					height: 55px;
+					border-radius: 50%;
+					overflow: hidden;
+					margin-right: 15px;
+				}
+
+				.review-area .profile .profile-image img {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+
+				.review-area .profile .profile-desc {
+					display: flex;
+					flex-direction: column;
+				}
+
+				.review-area .profile-desc span:nth-child(1) {
+					font-size: 24px;
+					font-weight: bold;
+					color: #2b2b2b;
+				}
+
+				.review-area .profile-desc span:nth-child(2) {
+					font-size: 15px;
+					color: #ffffff;
+				}
+
+				.owl-nav{
+					position: absolute;
+					right: 20px;
+					bottom: -10px;
+				}
+				.owl-nav button{
+					border-radius: 50% !important;
+				}
+				.owl-nav .owl-prev i,
+				.owl-nav .owl-next i{
+					padding: 10px !important;
+					border-radius: 50%;
+					font-size: 18px !important;
+					background-color: var(--card-clr) !important;
+					color: var(--primary-clr);
+					cursor: pointer;
+					transition: 0.4s;
+				}
+				.owl-nav .owl-prev i:hover,
+				.owl-nav .owl-next i:hover{
+					background-color: var(--primary-clr) !important;
+					color: #e9e9e9;
+				}
+				.owl-nav .owl-next,
+				.owl-nav .owl-prev {
+					background-color: transparent !important;
+					border: none !important;
+					border-radius: 50% !important;
+					padding: 0 !important;
+					font-size: 18px !important;
+					color: var(--primary-clr);
+					cursor: pointer;
+					transition: 0.4s;
+				}
+
+				.owl-nav .owl-next:hover,
+				.owl-nav .own-prev:hover {
+					background-color: var(--primary-clr) !important;
+					color: #000000;
+				}
+
+				.review-area .owl-dots {
+					margin-top: 15px;
+				}
+
+				.review-area .owl-dots .owl-dot span {
+					background-color: #ffffff !important;
+					padding: 6px !important;
+				}
+
+				.review-area .owl-dot.active span {
+					background-color: var(--primary-clr) !important;
+				}
+
+				/* contact */
+				/* General styles for the contact section */
+				.contact-section {
+				width: 100%;
+				padding: 3rem 1rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				}
+
+				.contact-intro {
+					text-align: center; /* Center align the text in contact-intro */
+					}
+
+				.contact-intro > * + * {
+				text-align: center;
+				}
+
+				.contact-title {
+				font-size: 1.875rem;
+				line-height: 2.25rem;
+				font-weight: 700;
+				}
+
+				.contact-description {
+				color: rgb(107 114 128);
+				}
+
+				/* Container for centering the form */
+				.form-container {
+				width: 100%;
+				max-width: 40rem; /* Maximum width for the form */
+				margin: 0 auto;
+				background: #fff;
+				padding: 2rem;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+				}
+
+				.form-group-container {
+				display: grid;
+				gap: 1rem;
+				margin-top: 2rem;
+				}
+
+				.form-group {
+				display: flex;
+				flex-direction: column;
+				}
+
+				.form-label {
+				margin-bottom: 0.5rem;
+				}
+
+				.form-input,
+				.form-textarea {
+				padding: 0.5rem;
+				border: 1px solid #e5e7eb;
+				display: flex;
+				height: 2.5rem;
+				width: 100%;
+				border-radius: 0.375rem;
+				font-size: 0.875rem;
+				line-height: 1.25rem;
+				}
+
+				.form-input::placeholder,
+				.form-textarea:focus-visible {
+				color: #6b7280;
+				}
+
+				.form-input:focus-visible,
+				.form-textarea:focus-visible {
+				outline: 2px solid #ffffff;
+				outline-offset: 2px;
+				}
+
+				.form-textarea {
+				min-height: 120px;
+				}
+
+				.form-submit {
+				width: 100%;
+				margin-top: 1.2rem;
+				background-color: #b68834;
+				color: #fff;
+				padding: 13px 5px;
+				border-radius: 0.375rem;
+				}
+
+
+				/* card menu */
+
+				a,
+				a:hover,
+				a:focus {
+					color: inherit;
+				}
+
+
+				.container-fluid,
+				.container {
+					max-width: 1200px;
+				}
+
+				.card-container {
+					padding: 100px 0px;
+					-webkit-perspective: 1000;
+					perspective: 1000;
+				}
+
+
+				.profile-card-2 {
+					max-width: 300px;
+					background-color: #FFF;
+					box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+					background-position: center;
+					overflow: hidden;
+					position: relative;
+					margin: 10px auto;
+					cursor: pointer;
+					border-radius: 10px;
+				}
+
+				.profile-card-2 img {
+					transition: all linear 0.25s;
+					width: 300px;
+					height: 350px;
+				}
+
+				.profile-card-2 .profile-name {
+					position: absolute;
+					left: 30px;
+					bottom: 70px;
+					font-size: 30px;
+					color: #FFF;
+					text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+					font-weight: bold;
+					transition: all linear 0.25s;
+				}
+
+				.profile-card-2 .profile-icons {
+					position: absolute;
+					bottom: 30px;
+					right: 30px;
+					color: #FFF;
+					transition: all linear 0.25s;
+				}
+
+				.profile-card-2 .profile-username {
+					position: absolute;
+					bottom: 50px;
+					left: 30px;
+					color: #FFF;
+					font-size: 13px;
+					transition: all linear 0.25s;
+				}
+
+				.profile-card-2 .profile-icons .fa {
+					margin: 5px;
+				}
+
+				.profile-card-2:hover img {
+					filter: grayscale(100%);
+				}
+
+				.profile-card-2:hover .profile-name {
+					bottom: 80px;
+				}
+
+				.profile-card-2:hover .profile-username {
+					bottom: 60px;
+				}
+
+				.profile-card-2:hover .profile-icons {
+					right: 40px;
+				}
+				.profile-icons {
+					font-weight: bold;
+					background-color: #b68834;
+					border: 4px solid #b68834; 
+					border-radius: 5px;
+				}
+
+
+
+				
+
+
+			</style>
+		</head>
+		<body>
+
+			<header id="header" id="home">		  	
+				<div class="container">
+					<div class="row align-items-center justify-content-between d-flex">
+						<div id="logo">
+							<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+						</div>
+						<nav id="nav-menu-container">
+							<ul class="nav-menu">
+								<li class="menu-active"><a href="#home">Home</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#coffee">Coffee</a></li>
+								<li><a href="#gallery">Gallery</a></li>
+								<li><a href="#review">Review</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+
+			<!-- start banner Area -->
+			<section class="banner-area" id="home">	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-start">
+						<div class="banner-content col-lg-7">
+							<!-- <h6 class="text-white text-uppercase">Now you can feel the Energy</h6> -->
+							<h1 style="color: #333;">
+								Mulai Hari Anda dengan <br>
+    							segelas Kopi Ceban			
+							</h1>
+							<a href="#" class="primary-btn text-uppercase">Buy Now</a>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+			<!-- Start video-sec Area -->
+			<section class="video-sec-area pb-100 pt-40" id="about">
+				<div class="container">
+					<div class="row justify-content-start align-items-center">
+						<div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+							<div class="overlay overlay-bg"></div>
+							<a class="play-btn" href="img/elements/video.mp4"><img class="img-fluid" src="img/play-icon.png" alt=""></a>
+						</div>						
+						<div class="col-lg-6 video-left">
+							<h6>Proses Pembuatan Kopi Langsung</h6>
+							<h2 class="mt-2 mb-2">Saksikan Kami Membuat Kopi Langsung</h2>
+							<p><span>Kami siap memberikan layanan terbaik untuk Anda.</span></p>
+							<p style="text-align: justify;">
+								Kami membuka pintu kami untuk Anda melihat langsung bagaimana kami menciptakan setiap cangkir kopi dengan penuh dedikasi. Bergabunglah dengan kami dalam perjalanan mengeksplorasi rasa dan aroma yang luar biasa.
+							</p>
+							<img class="img-fluid" src="img/signature.png" alt="">
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End video-sec Area -->
+			
+			<!-- Start menu Area -->
+						<!-- Start menu Area -->
+			<section class="menu-area section-gap" id="coffee">
+				<div class="container">
+					<div class="row justify-content-center"> <!-- Mengubah dari 'd-flex' menjadi 'justify-content-center' untuk mengatur posisi ke tengah -->
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h1 class="mb-10">Nikmati Kelezatan Kopi Ceban Kami</h1>
+								<p>Untuk Anda yang mencari kopi berkualitas dengan harga yang terjangkau.</p>
+							</div>							
+						</div>
+					</div>                     
+					<div class="row justify-content-center"> <!-- Mengubah dari 'd-flex' menjadi 'justify-content-center' untuk mengatur posisi ke tengah -->
+						<!-- <div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Ceban Pertama</h4>
+									<p class="price float-right">Rp. 10.000</p>
+								</div>
+								<p>
+									Nikmati kekayaan krim dari Es Kopi Susu khas kami, dicampur dengan susu kental manis (SKM) untuk cita rasa yang memikat.
+								</p>								
+							</div>
+							<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Ceban Kedua</h4>
+									<p class="price float-right">Rp. 10.000</p>
+								</div>
+								<p>
+									Rasakan keseimbangan sempurna dari Es Kopi Susu kami yang disatukan dengan gula merah alami (Gula Aren), memberikan sentuhan unik dan menyegarkan.
+								</p>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Ceban Ketiga</h4>
+									<p class="price float-right">Rp. 10.000</p>
+								</div>
+								<p>
+									Menikmati keberanian dari Es Americano kami, dicampur dengan manisnya madu murni, menciptakan minuman yang harmonis dan menyegarkan.
+								</p>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>Ceban Terakhir</h4>
+									<p class="price float-right">Rp. 10.000</p>
+								</div>
+								<p>
+									Memuaskan dahaga Anda dengan Es Americano kami yang menyegarkan yang dicampur dengan air soda yang segar, memberikan pengalaman rasa yang menyegarkan dan menyegarkan.
+								</p>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-menu">
+								<div class="title-div justify-content-between d-flex">
+									<h4>All In</h4>
+									<p class="price float-right">Rp. 10.000</p>
+								</div>
+								<p>
+									Peluk kehangatan dari Hot Americano kami, dipadukan dengan kelezatan susu kental manis (SKM), menawarkan kelezatan kopi yang memuaskan.
+								</p>								
+							</div>
+						</div>
+						</div> -->
+						<div class="col-md-4">
+							<div class="profile-card-2"><img src="img/f7.jpg" class="img img-responsive">
+								<div class="profile-name">Ceban Pertama</div>
+								<div class="profile-username">SKM</div>
+								<div class="profile-icons" style="color: #ffffff;">Rp. 10.000</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="profile-card-2"><img src="img/f1.jpg" class="img img-responsive">
+								<div class="profile-name">Ceban Kedua</div>
+								<div class="profile-username">Gula Aren</div>
+								<div class="profile-icons" style="color: #ffffff;">Rp. 10.000</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="profile-card-2"><img src="img/f3.jpg" class="img img-responsive">
+								<div class="profile-name">Ceban Ketiga</div>
+								<div class="profile-username">Americano Madu</div>
+								<div class="profile-icons" style="color: #ffffff;">Rp. 10.000</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="profile-card-2"><img src="img/f5.jpg" class="img img-responsive">
+								<div class="profile-name">Ceban Terakhir</div>
+								<div class="profile-username">Americano Soda</div>
+								<div class="profile-icons" style="color: #ffffff;">Rp. 10.000</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="profile-card-2"><img src="img/f6.jpg" class="img img-responsive">
+								<div class="profile-name">All In</div>
+								<div class="profile-username">Hot americano SKM</div>
+								<div class="profile-icons" style="color: #ffffff;">Rp. 10.000</div>
+							</div>
+						</div>
+						
+					</div>                      
+				</div>
+			</section>
+			<!-- End menu Area -->
+
+
+			<!-- Start gallery Area -->
+			<section class="gallery-area section-gap" id="gallery">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h1 class="mb-10">Temukan Keistimewaan Kopi Ceban Kami</h1>
+								<p>Bagi mereka yang ingin merasakan sensasi kopi yang istimewa.</p>
+							</div>
+						</div>
+					</div>						
+					<div class="row">
+						<div class="col-lg-4">
+							<a href="img/f1.jpg" class="img-pop-home">
+								<img class="img-fluid" src="img/f1.jpg" alt="">
+							</a>	
+							<a href="img/f2.jpg" class="img-pop-home">
+								<img class="img-fluid" src="img/f2.jpg" alt="">
+							</a>	
+							<a href="img/f5.jpg" class="img-pop-home">
+								<img class="img-fluid" src="img/f5.jpg" alt="">
+							</a>	
+						</div>
+						<div class="col-lg-8">
+							<a href="img/f3.jpg" class="img-pop-home">
+								<img class="img-fluid" src="img/f3.jpg" alt="">
+							</a>	
+							<div class="row">
+								<div class="col-lg-6">
+									<a href="img/f4.jpg" class="img-pop-home">
+										<img class="img-fluid" src="img/f4.jpg" alt="">
+									</a>	
+								</div>
+								<div class="col-lg-6">
+									<a href="img/f6.jpg" class="img-pop-home">
+										<img class="img-fluid" src="img/f6.jpg" alt="">
+									</a>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End gallery Area -->
+			
+			<!-- Start review Area -->
+			<section class="review-area section-gap" id="review">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-10">
+							<div class="title text-center">
+								<h1 class="mb-10">Pendapat Kostumer Tentang Kami</h1>
+								<p>Siapa yang sangat mencintai kopi murah berkualitas.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Owl Carousel Slider Starts -->
+					<div class="owl-carousel owl-theme testimonials-container">
+						<!-- Item1 Starts -->
+						<div class="item testimonial-card">
+							<main class="test-card-body">
+								<div class="quote">
+									<i class="fa fa-quote-left"></i>
+									<h2>Kopi Ceban Enak Banget!</h2>
+								</div>
+								<p>Saya sangat terkesan dengan Kopi Ceban. Rasanya enak dan harganya sangat terjangkau. Cocok untuk diminum setiap hari.</p>
+								<div class="ratings">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</main>
+							<div class="profile">
+								<div class="profile-image">
+									<img src="img/elements/1.png">
+								</div>
+								<div class="profile-desc">
+									<span>Agus Santoso</span>
+									<span>Pecinta Kopi</span>
+								</div>
+							</div>
+						</div>
+						<!-- Item1 Ends -->
+
+						<!-- Item2 Starts -->
+						<div class="item testimonial-card">
+							<main class="test-card-body">
+								<div class="quote">
+									<i class="fa fa-quote-left"></i>
+									<h2>Kopi Ceban Bikin Ketagihan</h2>
+								</div>
+								<p>Saya tidak pernah menyangka kopi dengan harga Rp 10.000 bisa seenak ini. Kopi Ceban benar-benar bikin ketagihan!</p>
+								<div class="ratings">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</main>
+							<div class="profile">
+								<div class="profile-image">
+									<img src="img/elements/2.png">
+								</div>
+								<div class="profile-desc">
+									<span>Dewi Ayu</span>
+									<span>Penikmat Kopi</span>
+								</div>
+							</div>
+						</div>
+						<!-- Item2 Ends -->
+
+						<!-- Item3 Starts -->
+						<div class="item testimonial-card">
+							<main class="test-card-body">
+								<div class="quote">
+									<i class="fa fa-quote-left"></i>
+									<h2>Harga Terjangkau, Rasa Mewah</h2>
+								</div>
+								<p>Kopi Ceban memberikan pengalaman ngopi yang luar biasa dengan harga yang sangat terjangkau. Rasa dan aromanya sangat khas.</p>
+								<div class="ratings">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</main>
+							<div class="profile">
+								<div class="profile-image">
+									<img src="img/elements/1.png">
+								</div>
+								<div class="profile-desc">
+									<span>Budi Prasetyo</span>
+									<span>Karyawan Swasta</span>
+								</div>
+							</div>
+						</div>
+						<!-- Item3 Ends -->
+
+						<!-- Item4 Starts -->
+						<div class="item testimonial-card">
+							<main class="test-card-body">
+								<div class="quote">
+									<i class="fa fa-quote-left"></i>
+									<h2>Kopi Nikmat Setiap Hari</h2>
+								</div>
+								<p>Dengan Kopi Ceban, saya bisa menikmati kopi nikmat setiap hari tanpa menguras dompet. Sangat direkomendasikan!</p>
+								<div class="ratings">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</main>
+							<div class="profile">
+								<div class="profile-image">
+									<img src="img/elements/2.png">
+								</div>
+								<div class="profile-desc">
+									<span>Siti Nurhaliza</span>
+									<span>Ibu Rumah Tangga</span>
+								</div>
+							</div>
+						</div>
+						<!-- Item4 Ends -->
+
+						<!-- Item5 Starts -->
+						<div class="item testimonial-card">
+							<main class="test-card-body">
+								<div class="quote">
+									<i class="fa fa-quote-left"></i>
+									<h2>Kopi Ceban, Pilihan Tepat</h2>
+								</div>
+								<p>Saya sudah mencoba banyak kopi, tapi Kopi Ceban selalu menjadi pilihan tepat. Rasanya yang kuat dan harga yang bersahabat membuat saya selalu kembali.</p>
+								<div class="ratings">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</main>
+							<div class="profile">
+								<div class="profile-image">
+									<img src="img/elements/2.png">
+								</div>
+								<div class="profile-desc">
+									<span>Rina Suryani</span>
+									<span>Mahasiswi</span>
+								</div>
+							</div>
+						</div>
+						<!-- Item5 Ends -->
+
+						<!-- Item6 Starts -->
+						<div class="item testimonial-card">
+							<main class="test-card-body">
+								<div class="quote">
+									<i class="fa fa-quote-left"></i>
+									<h2>Minum Kopi Jadi Lebih Hemat</h2>
+								</div>
+								<p>Sejak kenal Kopi Ceban, minum kopi jadi lebih hemat tanpa harus mengorbankan rasa. Kopi ini benar-benar berkualitas.</p>
+								<div class="ratings">
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+								</div>
+							</main>
+							<div class="profile">
+								<div class="profile-image">
+									<img src="img/elements/1.png">
+								</div>
+								<div class="profile-desc">
+									<span>Hendra Wijaya</span>
+									<span>Pekerja Lepas</span>
+								</div>
+							</div>
+						</div>
+						<!-- Item6 Ends -->
+					</div>
+
+					<!-- Owl Carousel Slider Ends -->
+
+					<div class="row counter-row justify-content-center text-center">
+						<div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter" id="happy-clients">2536</h1>
+							<p>Happy Clients</p>
+						</div>
+						<div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter" id="cups-of-coffee">2013</h1>
+							<p>Cups of Coffee Served</p>
+						</div>
+						<div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter" id="total-submissions">10536</h1>
+							<p>Total Submissions</p>
+						</div>
+					</div>
+					
+					
+					<script>
+						function animateValue(id, start, end, duration) {
+							var range = end - start;
+							var current = start;
+							var increment = end > start ? 1 : -1;
+							var stepTime = Math.abs(Math.floor(duration / range));
+							if (stepTime < 150) stepTime = 150; // Kecepatan minimum
+							var obj = document.getElementById(id);
+							var timer = setInterval(function () {
+								current += increment;
+								obj.textContent = current;
+								if (current == end) {
+									clearInterval(timer);
+								}
+							}, stepTime);
+						}
+					
+						// Mulai dari nilai sekitar 2000-an
+						animateValue("happy-clients", 2000, 2536, 3000); // Angka akan bertambah dari sekitar 2000 ke 2536 dalam 3 detik
+						animateValue("cups-of-coffee", 1800, 2013, 2000); // Angka akan bertambah dari sekitar 1800 ke 2013 dalam 2 detik
+						animateValue("total-submissions", 10000, 10536, 4000); // Angka akan bertambah dari sekitar 10000 ke 10536 dalam 4 detik
+					</script>
+					
+					
+					
+				</div>	
+			</section>
+			<!-- End review Area -->
+			
+			<section class="display-hidden">
+				
+				<h1>.</h1>
+			</section>
+
+			<!-- Start Contact Area -->
+			<section class="contact-section">
+				<div class="contact-intro">
+				<h2 class="contact-title">Get in Touch</h2>
+				<p class="contact-description">
+					Isi formulir di bawah ini dan kami akan menghubungi Anda secepat mungkin.
+				</p>
+				</div>
+			
+				<div class="form-container"> 
+				<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+					<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+					<input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+					<input type="hidden" name="from_name" value="My Website" />
+				
+			
+					<div class="form-group-container">
+					<div class="form-group">
+						<label for="name" class="form-label">Name</label>
+						<input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+					</div>
+					<div class="form-group">
+						<label for="email" class="form-label">Email</label>
+						<input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+					</div>
+					<div class="form-group">
+						<label for="phone" class="form-label">Phone</label>
+						<input id="phone" name="phone" class="form-input" placeholder="+82 (234) 56789" type="text" />
+					</div>
+					<div class="form-group">
+						<label for="message" class="form-label">Message</label>
+						<textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+					</div>
+					</div>
+					<button class="form-submit" type="submit">Send Message</button>
+				</form>
+				</div>
+			</section>
+			<!-- End Contact Area -->
+			
+
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p>
+									Kami berdiri sejak tahun 2024, fokus pada penjualan kopi berkualitas dengan harga terjangkau. Berbasis di Metro, kami berkomitmen untuk memberikan yang terbaik bagi pelanggan kami.
+								</p>
+								<p class="footer-text">
+									
+									Copyright &copy;<script>document.write(new Date().getFullYear());</script> Ceban Metro. Desain oleh <a href="https://colorlib.com" target="_blank">Colorlib</a> <i class="fa fa-heart-o" aria-hidden="true"></i>
+
+
+								</p>								
+							</div>
+						</div>
+						<div class="col-lg-5  col-md-6 col-sm-6">
+							
+						</div>						
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa-brands fa-facebook"></i></a>
+									<a href="#"><i class="fa-brands fa-twitter"></i></a>
+									<a href="https://www.instagram.com/kopiceban_metro/"><i class="fa-brands fa-instagram"></i></a>
+									<a href="https://www.tiktok.com/@kopiceban"><i class="fa-brands fa-tiktok"></i></a>
+								</div>
+							</div>
+						</div>							
+					</div>
+				</div>
+			</footer>	
+			<!-- End footer Area -->	
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>			
+			<script src="js/jquery.sticky.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>			
+			<script src="js/parallax.min.js"></script>	
+			<script src="js/waypoints.min.js"></script>
+			<script src="js/jquery.counterup.min.js"></script>					
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+			<script>
+			  $(document).ready(function(){
+					$('.testimonials-container').owlCarousel({
+						loop: true,
+						margin: 10,
+						nav: true,
+						dots: true,
+						autoplay: true,
+						autoplayTimeout: 5000,
+						responsive: {
+							0: {
+								items: 1
+							},
+							600: {
+								items: 2
+							},
+							1000: {
+								items: 2
+							}
+						}
+					});
+				});
+
+			</script>
+
+		</body>
+	</html>
+
+
+
